@@ -26,11 +26,19 @@ function processFirstItem(stringList, callback) {
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
- * 1. What is the difference between counter1 and counter2?
+ * 1. What is the difference between counter1 and counter2? 
  * 
+ * counter1 maker is invoked at the bottom, while code 2 is 
+ * invoked by the return statament.
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * counter 1 used a closure because after the brackets the const conter 1 = counterMaker is calling the variable in the function let count =0.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * You will use counter1 when when you just want the variable to be added by 1 in the console.
+ * you want counter to when you want the variable count to be revieled. 
+ * 
  *
 */
 
@@ -56,11 +64,15 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning() {
 
-    /*Code Here*/
-
+    var  points = 0;
+     function returnIning() {
+      return (inning);
+     points++;
+  }
 }
+const points = ining();
 
 /* Task 3: finalScore()
 
@@ -76,11 +88,13 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+const  finalScore =(function(inning) {
+  let points = inning;
+  return ('Home $[inning], Away $[inning]');
 
-  /*Code Here*/
+})
 
-}
+console.log(finalScore);
 
 /* Task 4: 
 
@@ -104,8 +118,9 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
-}
+const scoreboard = (function(getInningScore , inning ,aNumber ) {
+ return finalScore;
+ return inning++
+});
 
-
+const inning=scoreboard();
